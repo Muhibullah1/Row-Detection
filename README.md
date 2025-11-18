@@ -26,7 +26,12 @@ crop_row_detection/
 ├── Image/                  # Images directory
 
 │   ├── train/
+
 │   └── val/
+
 ├── Labels/                 # Masks directory
 
 └── checkpoints/            # Saved models
+
+# Training
+python main.py
