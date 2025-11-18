@@ -35,3 +35,10 @@ crop_row_detection/
 
 # Training
 python main.py
+
+# Validation
+model = CRowNet(3,1)
+model.load_state_dict(torch.load('/path/to/checkpoints'))
+model.to(device)
+validate_model(model, val_loader, device=device)
+
