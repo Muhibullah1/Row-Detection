@@ -25,9 +25,9 @@ crop_row_detection/
 
 ├── Image/                  # Images directory
 
-│  ├── train/
+│    ├── train/
 
-│  └── val/
+│    └── val/
 
 ├── Labels/                 # Masks directory
 
