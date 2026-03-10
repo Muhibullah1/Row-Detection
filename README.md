@@ -33,12 +33,35 @@ python main.py --images_dir /data/train_images
 --checkpoint_dir ./output
 --device cuda
 ```
+# Prediction
+## 1. On a single image
+```python croprow_cli.py predict \
+    --model /path/to/checkpoints/best_model.pth \
+    --input /data/test_images/field1.jpg \
+    --output_dir ./results \
+    --device cuda
+```
+## 2. On a multiple images
+```
+python pred_val.py predict \
+    --model /path/to/checkpoints/best_model.pth \
+    --input /data/test_images/ \
+    --output_dir ./results \
+    --batch_size 4
+```
 # Validation
 ```
-model = CRowNet(3,1)
-model.load_state_dict(torch.load('/path/to/checkpoints'))
-model.to(device)
-validate_model(model, val_loader, device=device)
+python pred_val.py validate \
+    --model /path/to/checkpoints/best_model.pth \
+    --images_dir /data/images/          # must contain 'val/' subfolder
+    --masks_dir /data/masks/            # contains ground truth masks
+    --batch_size 8 \
+    --device cuda \
+    --save_metrics ./val_metrics.json
 ```
-# Prediction
-
+# Get help
+```
+python pred_val.py --help
+python pred_val.py predict --help
+python pred_val.py validate --help
+```
