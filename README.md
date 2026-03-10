@@ -25,7 +25,13 @@ Row-Detection/
 ```
 # Training
 ```
-python main.py
+python main.py --images_dir /data/train_images
+--masks_dir /data/train_masks
+--batch_size 16
+--num_epochs 200
+--learning_rate 1e-3
+--checkpoint_dir ./output
+--device cuda
 ```
 # Validation
 ```
