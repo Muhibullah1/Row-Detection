@@ -61,8 +61,8 @@ def get_augmentation_pipeline(mode='train'):
             aug.IAAAdditiveGaussianNoise(p=0.2),
             aug.IAAPerspective(p=0.5),
             aug.OneOf([ aug.CLAHE(p=1), aug.RandomBrightness(p=1), aug.RandomGamma(p=1)], p=0.9),
-            aug.OneOf([aug.RandomContrast(p=1),aug.HueSaturationValue(p=1)], p=0.9)
-        ]
+            aug.OneOf([aug.RandomContrast(p=1),aug.HueSaturationValue(p=1)], p=0.9) ]
+        
     else:  # validation -> only perform resizing
         return [aug.Resize(567, 567)]
 
