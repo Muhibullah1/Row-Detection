@@ -65,3 +65,16 @@ python pred_val.py --help
 python pred_val.py predict --help
 python pred_val.py validate --help
 ```
+## Citation
+If you find this code useful in your research, please consider citing our paper:
+
+```bibtex
+@article{ullah2024quantifying,
+  title={Quantifying consistency of crop establishment using a lightweight U-Net deep learning architecture and image processing techniques},
+  author={Ullah, Muhib and Islam, Fatimah and Bais, Abdul},
+  journal={Computers and Electronics in Agriculture},
+  volume={217},
+  pages={108617},
+  year={2024},
+  publisher={Elsevier}
+}
