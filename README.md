@@ -10,7 +10,7 @@ https://doi.org/10.1016/j.compag.2024.108617
 
 ## Project Structure:
 ```
-crop_row_detection/
+Row-Detection/
 ├── main.py                 # Main training script (runs everything)
 ├── train.py                # Training utilities (train_epoch, evaluate_model)
 ├── model.py                # CRowNet model architecture
